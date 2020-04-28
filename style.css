@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-image:linear-gradient(to right, #63d3ff,#63ff8f); */
+    background-image:url('images/background-resize.png');
+    background-repeat:no-repeat;
+    background-color:#63d3ff;
+    color:white;
+    min-height:100vh;
+}
+
+header{
+    font-family:'Ubuntu', sans-serif;
+    font-size:2rem;
+    background:rgba(0,0,0,0.3);
+    margin:5vh 0;
+    padding: 1rem;
+}
+
+h1{
+    opacity: 1;
+}
+
+header, form{
+    /* min-height:20vh; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button {
+    padding:0.5rem;
+    font-size: 2rem;
+    border:none;
+    background:white;
+    font-family:'Poppins',sans-serif;
+}
+
+form button {
+    color:#63d3ff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    color:white;
+    background:#63d3ff;
+}
+
+.todo-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-list{
+    font-family:'Poppins', sans-serif;
+    min-width:30%;
+    list-style:none;
+}
+
+.todo{
+    margin:1rem;
+    background:white;
+    color:black;
+    font-size:1.5rem;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    transition: 0.5s ease;
+}
+
+.todo li{
+    flex:1;
+
+}
+
+.delete-btn, .complete-btn{
+    border:none;
+    padding:1rem;
+    cursor: pointer;
+    background:red;
+    color:white;
+}
+
+.complete-btn{
+    background:#24da58;
+}
+
+.todo-item{
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, .fa-check{
+    pointer-events:none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall{
+    transform:translateY(8rem) rotateX(90deg);
+    opacity:0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline:none;
+    border:none;
+    color:#63d3ff;
+    width:10rem;
+    cursor: pointer;
+    padding:1rem;
+}
+
+.select {
+    margin:1rem;
+    position:relative;
+    overflow:hidden;
+}
+
+.select::after{
+    content:"\25BC";
+    position:absolute;
+    background: #63d3ff;
+    top:0;
+    right:0;
+    padding:1rem;
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+
+.select:hover::after{
+    background: white;
+    color:#63d3ff;
+}
